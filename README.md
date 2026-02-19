@@ -13,7 +13,7 @@ npm install mdi-gallery-dev --save-dev
 Ou, se o pacote estiver em um repositório Git:
 
 ```bash
-npm install git+https://github.com/SEU-USUARIO/SEU-REPO.git#main:packages/mdi-gallery-dev --save-dev
+npm install git+https://github.com/gpereira86/mdi-js-gallery-dev.git#main:packages/mdi-gallery-dev --save-dev
 ```
 
 Ou por pasta local (para testar antes de publicar):
