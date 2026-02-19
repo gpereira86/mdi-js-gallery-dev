@@ -1,0 +1,29 @@
+{
+  "name": "mdi-gallery-dev",
+  "version": "1.0.0",
+  "description": "Galeria de ícones @mdi/js para Vue 3 + Vuetify 3 — uso em desenvolvimento",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./MdiIconsGallery.vue": "./src/MdiIconsGallery.vue"
+  },
+  "files": [
+    "src",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "vue": "^3.4.0",
+    "vuetify": "^3.0.0",
+    "@mdi/js": "*"
+  },
+  "keywords": [
+    "vue",
+    "vuetify",
+    "mdi",
+    "icons",
+    "gallery",
+    "dev"
+  ],
+  "license": "MIT"
+}
