@@ -2,7 +2,7 @@
 
 Galeria de ícones **@mdi/js** para Vue 3 + Vuetify 3, com filtro dinâmico e carregamento em chunk. Pensada para uso em **desenvolvimento** (consultar e copiar nomes de ícones).
 
-<img src="docs/animacao.gif" width="600">
+<img src="./animacao.gif" width="750">
 
 ## Instalação (apenas em dev)
 
