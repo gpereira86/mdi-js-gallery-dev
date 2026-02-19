@@ -10,7 +10,7 @@ No projeto Vue 3 + Vuetify que já usa `@mdi/js`:
 npm install mdi-gallery-dev --save-dev
 ```
 
-Ou, se o pacote estiver em um repositório Git:
+Ou, direto pelo repositório Git:
 
 ```bash
 npm install git+https://github.com/gpereira86/mdi-js-gallery-dev.git#main:packages/mdi-gallery-dev --save-dev
