@@ -16,7 +16,7 @@ Ou, direto pelo repositório Git:
 npm install git+https://github.com/gpereira86/mdi-js-gallery-dev.git#main:packages/mdi-gallery-dev --save-dev
 ```
 
-Ou por pasta local (para testar antes de publicar):
+Ou por pasta local:
 
 ```bash
 npm install ./packages/mdi-gallery-dev --save-dev
