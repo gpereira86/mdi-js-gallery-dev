@@ -24,7 +24,8 @@ npm install ./packages/mdi-gallery-dev --save-dev
 
 ## Uso
 
-Depois de criar o router, adicione a rota da galeria (por exemplo em `src/router/index.ts` ou `main.ts`):
+Depois de criar o router, adicione a rota da galeria (por exemplo em `src/router/index.ts` ou `main.ts`),
+restringindo o uso a ambiente de desenvolvimento (ou a uma flag explícita), como no exemplo abaixo:
 
 ```js
 import { createApp } from 'vue';
@@ -32,21 +33,33 @@ import App from './App.vue';
 import router from './router';
 import { installMdiGallery } from 'mdi-gallery-dev';
 
+// Habilita a galeria apenas em ambiente dev ou quando a flag estiver ligada
+const enableDevRoutes =
+  import.meta.env.DEV || import.meta.env.VITE_ENABLE_DEV_ROUTES === 'true';
+
 const app = createApp(App);
 app.use(router);
 
-// Registrar a galeria (rota /mdi-icons, sem login)
-installMdiGallery(router);
+if (enableDevRoutes) {
+  // Registrar a galeria (rota /mdi-icons, sem login)
+  installMdiGallery(router);
+}
 
 app.mount('#app');
 ```
 
-Ou adicione a rota manualmente:
+Ou adicione a rota manualmente com a mesma proteção:
 
 ```js
+import router from './router';
 import { mdiGalleryRoute } from 'mdi-gallery-dev';
 
-router.addRoute(mdiGalleryRoute);
+const enableDevRoutes =
+  import.meta.env.DEV || import.meta.env.VITE_ENABLE_DEV_ROUTES === 'true';
+
+if (enableDevRoutes) {
+  router.addRoute(mdiGalleryRoute);
+}
 ```
 
 ## Acesso
@@ -64,12 +77,6 @@ O pacote espera que o projeto já tenha:
 - `vue` ^3.4
 - `vuetify` ^3.0
 - `@mdi/js`
-
-## Compartilhar com amigos
-
-1. **Publicar no npm** (se tiver conta): na pasta `packages/mdi-gallery-dev`, rode `npm publish --access public`.  
-2. **GitHub**: suba o repositório e use o comando `npm install git+https://...` acima.  
-3. **Zip**: compacte a pasta `packages/mdi-gallery-dev` e envie; o amigo descompacta e usa `npm install ./caminho/mdi-gallery-dev --save-dev`.
 
 ## Remover
 
